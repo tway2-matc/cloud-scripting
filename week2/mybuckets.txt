@@ -1,0 +1,15 @@
+{
+    "ResponseMetadata": {
+        "RequestId": "7AN35SP82XCTVDRH",
+        "HostId": "Cf1wLi+9jDQNnXU+7bE/W1wLym6Cuael7L/5tke7QGuR1nr7UTEa4EMblBLuxBeVw7O2TfBmUSuYBemnnbMia5vMyKyPIi0IyFFtTuJkAmI=",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+            "x-amz-id-2": "Cf1wLi+9jDQNnXU+7bE/W1wLym6Cuael7L/5tke7QGuR1nr7UTEa4EMblBLuxBeVw7O2TfBmUSuYBemnnbMia5vMyKyPIi0IyFFtTuJkAmI=",
+            "x-amz-request-id": "7AN35SP82XCTVDRH",
+            "date": "Mon, 04 Sep 2023 16:53:43 GMT",
+            "server": "AmazonS3",
+            "content-length": "0"
+        },
+        "RetryAttempts": 0
+    }
+}
