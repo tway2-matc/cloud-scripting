@@ -7,7 +7,7 @@ def main():
     #gets the ami
     image = Get_Image(ec2Client)
     #creates an instance
-    instance = Create_EC2(image, ec2Client)
+    instance = Create_EC2(image, ec2Client, DRYRUN)
 
     #waits until the instance is running
     instance.wait_until_running()
@@ -38,7 +38,7 @@ def Get_Image(ec2Client):
         }])
     return images["Images"][0]["ImageId"]
 
-def Create_EC2(AMI, ec2Client):
+def Create_EC2(AMI, ec2Client, DRYRUN):
     ec2 = boto3.resource('ec2')
     #creates an instance with the latest linux 2 ami
     response = ec2Client.run_instances(
@@ -46,7 +46,19 @@ def Create_EC2(AMI, ec2Client):
         InstanceType = 't2.micro',
         MinCount = 1,
         MaxCount = 1,
-        DryRun = DRYRUN
+        DryRun = DRYRUN,
+        SecurityGroups = ['WebSG'],
+        UserData='''#!/bin/bash -ex
+            # Updated to use Amazon Linux 2
+            yum -y update
+            yum -y install httpd php mysql php-mysql
+            /usr/bin/systemctl enable httpd
+            /usr/bin/systemctl start httpd
+            cd /var/www/html
+            wget https://aws-tc-largeobjects.s3-us-west-2.amazonaws.com/CUR-TF-100-ACCLFO-2/lab6-scaling/lab-app.zip
+            unzip lab-app.zip -d /var/www/html/
+            chown apache:root /var/www/html/rds.conf
+            '''
     )
     #gets and returns the instance
     instance = ec2.Instance(response["Instances"][0]["InstanceId"])
