@@ -16,12 +16,12 @@ def main():
     #prints the tags
     print(Get_Tags(instance))
     #adds a new tag
-    print(Add_Tag(instance,"Name","Tighearnan"))
+    Add_Tag(instance,"Name","Tighearnan")
     #prints the tags again
     print(Get_Tags(instance))
 
     #terminates the instance
-    Terminate_EC2(instance)
+    #Terminate_EC2(instance)
 
 def Get_Image(ec2Client):
     #gets the images

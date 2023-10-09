@@ -1,0 +1,15 @@
+{
+    "ResponseMetadata": {
+        "RequestId": "VPYD70K95ZT4TNW1",
+        "HostId": "XTY5fXUdOTTlJ+scVid+voVLxfl3aWBS8+Jnf4WRZ6wfMXpcauXlfJMMlonnyRaoCfUNfgGaFhk=",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+            "x-amz-id-2": "XTY5fXUdOTTlJ+scVid+voVLxfl3aWBS8+Jnf4WRZ6wfMXpcauXlfJMMlonnyRaoCfUNfgGaFhk=",
+            "x-amz-request-id": "VPYD70K95ZT4TNW1",
+            "date": "Mon, 02 Oct 2023 20:36:55 GMT",
+            "server": "AmazonS3",
+            "content-length": "0"
+        },
+        "RetryAttempts": 0
+    }
+}
