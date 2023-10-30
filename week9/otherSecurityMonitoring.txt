@@ -1,0 +1,13 @@
+things to monitor:
+    security groups - monitoring rules for your ec2 instances to ensure that people can't, for example, ssh from anywhere
+        ec2 client
+        describe_security_groups, using IpPermissions
+        revoke_security_group_ingress, to handle offending rules
+    s3 buckets - ensuring buckets have policies set up properly
+        s3 client
+        get_bucket_policy
+        put_bucket_policy
+    efs - similar to s3, ensuring that efs filesystems have the correct policies
+        efs client
+        describe_file_system_policy
+        put_file_system_policy
