@@ -1,0 +1,16 @@
+1. Which Python library do you need to install to deploy an Application Service in Azure?
+
+    azure-mgmt-web
+
+2. Which function in this module do you need to use to create a new application?
+
+    create_or_update()
+
+3. Which Python library do you need to install to create a Key Vault Key in Azure?
+
+    azure-keyvault-keys
+
+4. What function do you use to retrieve a secret from the Key Vault?
+
+    get_key()
+
